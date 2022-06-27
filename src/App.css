@@ -1,0 +1,107 @@
+* {
+  font-family: "Playfair Display", serif;
+
+  color: black;
+}
+
+/* Home styling  */
+.open-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  navbar styling    */
+.text-center {
+  text-align: center;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  position: relative;
+  align-self: center;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  color: black;
+}
+
+.links a:active {
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: none;
+  color: #000;
+  border-radius: 0.2em;
+  background-color: wheat;
+  transition: all 0.2s ease-in;
+}
+
+.links a:visited {
+  text-decoration: none;
+}
+
+.links a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active {
+  border-radius: 0.2em;
+  border-width: 1em;
+  border-bottom: solid wheat;
+}
+
+.nav-bar {
+  display: flex;
+  padding: 0.4em 0;
+
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  justify-content: space-evenly;
+}
+
+.logo-nav {
+  display: flex;
+  padding: 0 0.6em;
+  justify-content: center;
+}
+
+.logo-nav > div {
+  font-weight: 600;
+  padding: 0 0.4em;
+  font-size: 1.4rem;
+}
+
+.buttons-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-nav > * {
+  flex-basis: 100%;
+}
+
+.no-link-style {
+  text-decoration: none;
+}
+
+/* basic profile styling */
+
+.form-basic {
+  margin-top: 1em;
+  width: fit-content;
+}
+
+.form-basic > div {
+  flex-basis: 100%;
+}
+
+.pd2em {
+  margin-top: 1.5em;
+  padding: 0.2em;
+}
