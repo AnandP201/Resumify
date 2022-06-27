@@ -51,8 +51,10 @@ const BasicProfile = () => {
   }
 
   useEffect(() => {
-    setFormData(resume["basic"]);
-    setFileInfo(resume["basic"]["photo"]);
+    if (JSON.stringify(resume) !== "{}") {
+      setFormData(resume["basic"]);
+      setFileInfo(resume["basic"]["photo"]);
+    }
   }, [resume]);
   return (
     <div>

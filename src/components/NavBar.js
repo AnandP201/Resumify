@@ -87,6 +87,7 @@ const NavBar = () => {
             appearance="default"
             onClick={() => {
               localStorage.removeItem("current");
+              setResume({});
               navigate("/");
             }}
           >
