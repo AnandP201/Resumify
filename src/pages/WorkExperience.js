@@ -11,10 +11,12 @@ const WorkExperience = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const arr = resume["experiences"];
-    setExperiences(arr);
+    if (resume["experiences"] !== undefined) {
+      const arr = resume["experiences"];
+      setExperiences(arr);
 
-    addToCache(resume);
+      addToCache(resume);
+    }
   }, [resume]);
 
   const addWork = (d) => {

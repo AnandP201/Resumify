@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Panel } from "rsuite";
 import Achievement from "../components/resumeItems/Achievement";
 import Experience from "../components/resumeItems/Experience";
@@ -16,8 +16,14 @@ const Resume = () => {
   const { resume } = useResume();
 
   const NULL = () => {
-    return JSON.stringify(resume) === JSON.stringify(obj);
+    return (
+      resume["experiences"] !== [] &&
+      resume["achievements"] !== [] &&
+      resume["basic"] !== {} &&
+      resume["education"] !== []
+    );
   };
+
   const basic = resume["basic"];
   const education = resume["education"];
   const experience = resume["experiences"];

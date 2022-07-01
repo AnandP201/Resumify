@@ -13,10 +13,11 @@ const Achievements = () => {
   const [achievements, setAchievements] = useState([]);
 
   useEffect(() => {
-    const arr = resume["achievements"];
-    setAchievements(arr);
-
-    addToCache(resume);
+    if (resume["achievements"] !== undefined) {
+      const arr = resume["achievements"];
+      setAchievements(arr);
+      addToCache(resume);
+    }
   }, [resume]);
 
   const addAchievement = (a) => {

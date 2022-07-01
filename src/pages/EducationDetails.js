@@ -45,10 +45,12 @@ const EducationDetails = () => {
   };
 
   useEffect(() => {
-    if (data_10 === null || data_12 === null || grad === null) {
-      setData10(resume["education"][0]);
-      setData12(resume["education"][1]);
-      setGrad(resume["education"][2]);
+    if (resume["education"] !== undefined) {
+      if (data_10 === null || data_12 === null || grad === null) {
+        setData10(resume["education"][0]);
+        setData12(resume["education"][1]);
+        setGrad(resume["education"][2]);
+      }
     }
   }, [data_10, data_12, grad, resume]);
 
